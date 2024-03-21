@@ -18,17 +18,28 @@ height: 150px;
 background-image: url(${CompanySymbol02});
 background-repeat: no-repeat;
 background-size: 50%;
-background-position: center;
+background-position: bottom;
 margin: 0px auto;
+`;
+
+const Shadow = styled.div`
+text-align: center;
+
+text-shadow: 0px 0px 10px white;
+h1 {font-Weight:bold; font-Size:60px; color:transparent; -webkit-text-stroke: 0.5px white;}
+h2 {font-Weight:bold; font-Size:75px; color:transparent; -webkit-text-stroke: 0.5px white;}
 `;
 
 
 const Text = styled.div`
+background: white;
 text-align: center;
+margin: -140px 0px;
 
-text-shadow: 0px 0px 15px #B4C8DC;
-h1 {font-Weight:bold; font-Size:60px; color:white;}
-h2 {font-Weight:bold; font-Size:80px; color:white;}
+color:transparent;
+background-clip:text;
+h1 {font-Weight:bold; font-Size:60px;}
+h2 {font-Weight:bold; font-Size:75px;}
 `;
 
 
@@ -38,7 +49,7 @@ border-top: 5px solid white;
 border-bottom: 5px solid white;
 border-radius: 5px;
 padding: 25px 25px;
-margin: 25px auto;
+margin: 165px auto;
 `;
 
 
@@ -53,11 +64,14 @@ a:hover {transition:all 0.5s ease; transform: translateY(-10px);}
 `;
 
 
-
 export const Footer = () => {
     return <Wrap>
         <Offical>
             <Symbol />
+            <Shadow>
+                <h1>STARISE</h1>
+                <h2>OFFICAL SNS</h2>
+            </Shadow>
             <Text>
                 <h1>STARISE</h1>
                 <h2>OFFICAL SNS</h2>

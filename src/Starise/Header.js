@@ -11,7 +11,6 @@ const Container = styled.div``;
 const XBar = styled.div`
 width: 100%;
 height: 5px;
-border-top: 2px solid black;
 background: linear-gradient(gray, white);
 `;
 
@@ -51,7 +50,8 @@ h1:hover:after {transform: scaleX(1);}
 export const Header = () => {
     return <Wrap>
         <Container>
-            <Logo></Logo>
+            <Link to={"/"}>
+            <Logo></Logo></Link>
             <XBar/>
             <Category>
                 <p>‖</p>
@@ -71,7 +71,6 @@ export const Header = () => {
                 <h1>GUIDELINE</h1></Link>
                 <p>‖</p>
             </Category>
-            <XBar/>
         </Container>
     </Wrap>
 }
