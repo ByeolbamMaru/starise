@@ -2,7 +2,6 @@ import { HashRouter, Route, Routes } from "react-router-dom"
 import { Home } from "./Starise/Home"
 import { Notfound } from "./Starise/Notfound"
 import { Header } from "./Starise/Header"
-import { Footer } from "./Starise/Footer"
 import { routes } from "./routes"
 import { ABOUT } from "./Starise/Category/ABOUT"
 import { NOTICE } from "./Starise/Category/NOTICE"
@@ -22,6 +21,5 @@ export const Router = () => {
       <Route path={routes.gu} element={<GUIDELINE/>} />
       <Route path="/*" element={<Notfound/>} />
     </Routes>
-    <Footer/>
   </HashRouter>
 }

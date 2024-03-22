@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import CompanyLogo from "./Image/CompanyLogo.png"
+import CompanyLogo from "../Image/CompanyLogo.png"
 import { Link } from "react-router-dom";
 
 const Wrap = styled.div``;
@@ -33,8 +33,8 @@ justify-content: space-between;
 align-items: center;
 margin: 25px auto;
 
-p {font-weight:bold; font-size:40px;}
-h1 {font-weight:bold; font-size:40px;}
+p {font-weight:bold; font-size:32px;}
+h1 {font-weight:bold; font-size:32px;}
 h1:hover {color: #497FBE; cursor: pointer;}
 h1:after {
     display:block;

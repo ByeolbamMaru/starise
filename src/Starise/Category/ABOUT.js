@@ -1,13 +1,10 @@
 import styled from "styled-components"
+import { IV } from "./ABOUT-S/IV";
 
- const Wrap = styled.div`
- width: 100%;
- height: 100px;
- display: flex;
- justify-content: center;
- `;
+ const About = styled.div``;
 
 export const ABOUT = () => {
-    return <Wrap>
-    </Wrap>
+    return <About>
+        <IV />
+    </About>
 }
