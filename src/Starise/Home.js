@@ -1,15 +1,14 @@
 import styled from "styled-components"
 import { Promotion } from "./Promotion";
-import { Footer } from "./Footer";
 
 
 const Load = styled.div`
-background-color: aliceblue;
+width: 100%;
+height: 200vh;
 `;
 
 export const Home = () => {
     return <Load>
         <Promotion />
-        <Footer />
     </Load>
 }

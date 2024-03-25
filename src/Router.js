@@ -6,8 +6,8 @@ import { routes } from "./routes"
 import { ABOUT } from "./Starise/Category/ABOUT"
 import { NOTICE } from "./Starise/Category/NOTICE"
 import { TALENT } from "./Starise/Category/TALENT"
-import { CONTENT } from "./Starise/Category/CONTENT"
 import { GUIDELINE } from "./Starise/Category/GUIDELINE"
+import { Footer } from "./Starise/Footer"
 
 export const Router = () => {
   return <HashRouter>
@@ -17,9 +17,9 @@ export const Router = () => {
       <Route path={routes.ab} element={<ABOUT/>} />
       <Route path={routes.no} element={<NOTICE/>} />
       <Route path={routes.ta} element={<TALENT/>} />
-      <Route path={routes.co} element={<CONTENT/>} />
       <Route path={routes.gu} element={<GUIDELINE/>} />
       <Route path="/*" element={<Notfound/>} />
     </Routes>
+    <Footer />
   </HashRouter>
 }

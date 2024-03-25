@@ -1,41 +1,41 @@
 import styled from "styled-components"
-import CompanyLogo from "../Image/CompanyLogo.png"
+import CompanyLogo from "./Image/CompanyLogo.png"
 import { Link } from "react-router-dom";
 
 const Wrap = styled.div``;
 
 
-const Container = styled.div``;
-
-
-const XBar = styled.div`
-width: 100%;
-height: 5px;
-background: linear-gradient(gray, white);
+const Container = styled.div`
+width: 90%;
+height: 150px;
+display: flex;
+justify-content: space-between;
+margin: 0px auto;
+align-items: center;
 `;
 
 
 const Logo = styled.div`
-width: 600px;
-height: 200px;
+width: 450px;
+height: 150px;
 background-image: url(${CompanyLogo});
 background-repeat: no-repeat;
-background-size: 80%;
+background-size: 100%;
 background-position: center;
-margin: 0px auto;
 `;
 
 
 const Category = styled.div`
-width: 80%;
+width: 40%;
+height: 60px;
+border: 4px solid #1A2156;
+border-radius: 30px;
 display: flex;
-justify-content: space-between;
+justify-content: center;
 align-items: center;
-margin: 25px auto;
 
-p {font-weight:bold; font-size:32px;}
-h1 {font-weight:bold; font-size:32px;}
-h1:hover {color: #497FBE; cursor: pointer;}
+h1 {font-weight:bold; font-size: 25px; color:#1A2156; margin: 0px 25px;}
+h1:hover {color: #497FBE; transform: scale(1.1); cursor: pointer;}
 h1:after {
     display:block;
     content: '';
@@ -51,25 +51,16 @@ export const Header = () => {
     return <Wrap>
         <Container>
             <Link to={"/"}>
-            <Logo></Logo></Link>
-            <XBar/>
+            <Logo /></Link>
             <Category>
-                <p>‖</p>
                 <Link to={"/ABOUT"}>
                 <h1>ABOUT</h1></Link>
-                <p>‖</p>
                 <Link to={"/NOTICE"}>
                 <h1>NOTICE</h1></Link>
-                <p>‖</p>
                 <Link to={"/TALENT"}>
                 <h1>TALENT</h1></Link>
-                <p>‖</p>
-                <Link to={"/CONTENT"}>
-                <h1>CONTENT</h1></Link>
-                <p>‖</p>
                 <Link to={"/GUIDELINE"}>
                 <h1>GUIDELINE</h1></Link>
-                <p>‖</p>
             </Category>
         </Container>
     </Wrap>
