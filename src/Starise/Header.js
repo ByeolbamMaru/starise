@@ -17,8 +17,6 @@ margin: 0px auto;
 align-items: center;
 
 @media screen and (max-width:768px){
-display: flex;
-justify-content
 }
 `;
 
@@ -34,6 +32,7 @@ background-position: center;
 @media screen and (max-width:768px){
 width: 200px;
 height: 50px;
+position: relative;
 }
 `;
 
@@ -56,18 +55,20 @@ h1:after {
 h1:hover:after {transform: scaleX(1);}
 
 @media screen and (max-width:768px){
-position: absolute;
-width: 1px;
-height: 1px;
-margin: -1px;
-overflow: hidden;
-clip-path: polygon(0 0, 0 0, 0 0);
+display: none;
 
 }
 `;
 
 
-const Menu = styled.div``;
+const Menu = styled.div`
+display:none;
+
+@media screen and (max-width:768px) {
+    display: block;
+}
+
+`;
 
 
 const slideInMenu = keyframes`
@@ -112,7 +113,7 @@ isOpen? css`animation-name: ${slideInMenu};`
 
 const XBar = styled.div`
 width: 100%;
-border: 0.5px solid black;
+border: 1px solid black;
 `;
 
 export const Header = () => {

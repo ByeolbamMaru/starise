@@ -1,3 +1,4 @@
+import "../CSS/Style.css"
 import styled from "styled-components"
 import Companysymbol02 from "./Image/CompanySymbol02.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -81,12 +82,19 @@ display: flex;
 justify-content: space-between;
 margin: 25px auto;
 
+.icon {
+    font-size: 75px;
+    color: white;
+    
+}
+
+
 animation-name: Dawn;
 @keyframes Dawn {
     from {transform:translateY(100px);}
 }
 animation-duration: 0.5s;
-animation-timing-function: ease-in;
+animation-timing-function: ease;
 animation-delay: 0s;
 animation-iteration-count: 1;
 animation-direction: normal;
@@ -98,6 +106,11 @@ a:hover {transition: all 0.1s ease-in; transform:translateY(-10px)}
     display: flex;
     justify-content: space-between;
     margin: 25px auto;
+
+    .icon {
+        font-size: 50px;
+    }
+    
 }
 `;
 
@@ -115,11 +128,11 @@ export const Footer = () => {
             <Xbar />
             <Sns>
                 <a href="https://twitter.com/StarNight_Maru" target="_Blank">
-                    <FontAwesomeIcon icon={faXTwitter} style={{fontSize:"70px", color:"white"}} /></a>
+                    <FontAwesomeIcon icon={faXTwitter} className="icon"/></a>
                 <a href="https://www.instagram.com/allday_0709/?hl=ko" target="_Blank" >
-                    <FontAwesomeIcon icon={faInstagram} style={{fontSize:"70px", color:"white"}} /></a>
+                    <FontAwesomeIcon icon={faInstagram} className="icon"/></a>
                 <a href="https://www.youtube.com/channel/UCM4L9QxnHOTluMQvoC3MbIQ" target="_Blank" >
-                    <FontAwesomeIcon icon={faYoutube}  style={{fontSize: "70px", color:"white"}} /></a>
+                    <FontAwesomeIcon icon={faYoutube}  className="icon"/></a>
             </Sns>
             <h2>E-mail - allday0709@naver.com</h2>
         </Container>
