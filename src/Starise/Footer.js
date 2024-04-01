@@ -1,5 +1,4 @@
-import "../CSS/Style.css"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import Companysymbol02 from "./Image/CompanySymbol02.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faXTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
@@ -10,9 +9,10 @@ height: 500px;
 background: linear-gradient(#497FBE, #1A2156);
 
 @media screen and (max-width:768px) {
-height: 400px;
+height: 350px;
 }
 `;
+
 
 
 const Container = styled.div`
@@ -47,7 +47,7 @@ text-align: center;
 h1 {font-weight:bold; font-size:75px; color:white}
 
 @media screen and (max-width:768px) {
-    h1 {font-weight:bold; font-size:50px; color:white}
+    h1 {font-size:50px;}
 }
 `;
 
@@ -55,12 +55,11 @@ h1 {font-weight:bold; font-size:75px; color:white}
 const Shadow = styled.div`
 text-align: center;
 
-text-shadow: 0px 0px 10px white;
--webkit-text-stroke: 1px white;
+-webkit-text-stroke: 0.5px white;
 h1 {font-weight:bold; font-size:75px; color:transparent; margin-top: -70px}
 
 @media screen and (max-width:768px) {
-    h1 {font-weight:bold; font-size:50px; color:transparent; margin-top: -45px}
+    h1 {font-size:50px; margin-top: -45px}
 }
 `;
 
@@ -86,18 +85,21 @@ margin: 25px auto;
     font-size: 75px;
     color: white;
     
-}
+    animation: FadeIn;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 
+@keyframes FadeIn {
+    from {
+        transform:translateY(100px);
+        opacity: 0%;}
 
-animation-name: Dawn;
-@keyframes Dawn {
-    from {transform:translateY(100px);}
+    to {
+        transform:translateY(0px);
+        opacity: 100%}
 }
-animation-duration: 0.5s;
-animation-timing-function: ease;
-animation-delay: 0s;
-animation-iteration-count: 1;
-animation-direction: normal;
+}
 
 a:hover {transition: all 0.1s ease-in; transform:translateY(-10px)}
 
@@ -108,9 +110,7 @@ a:hover {transition: all 0.1s ease-in; transform:translateY(-10px)}
     margin: 25px auto;
 
     .icon {
-        font-size: 50px;
-    }
-    
+        font-size: 50px;}
 }
 `;
 
@@ -134,7 +134,6 @@ export const Footer = () => {
                 <a href="https://www.youtube.com/channel/UCM4L9QxnHOTluMQvoC3MbIQ" target="_Blank" >
                     <FontAwesomeIcon icon={faYoutube}  className="icon"/></a>
             </Sns>
-            <h2>E-mail - allday0709@naver.com</h2>
         </Container>
     </Wrap>
 }
